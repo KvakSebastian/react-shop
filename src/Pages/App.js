@@ -1,6 +1,9 @@
 import React from 'react';
 import {ProductList} from 'Pages/ProductList';
-import React from "react";
+import {ProductDetails} from 'Pages/ProductDetails';
+import {Basket} from 'Pages/Basket';
+
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,9 +15,10 @@ function App() {
       //<ProductList />
       <Router>
         <Switch>
-          <Route path='/' component={ProductList}>
+          <Route path='/' component={ProductList} exact />
+          <Route path='/details' component={ProductDetails} />
+          <Route path='/basket' component={Basket} />
 
-          </Route>
         </Switch>
       </Router>
   );
