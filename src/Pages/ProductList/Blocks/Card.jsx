@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import {Card as CardComponent} from 'antd';
 import ReactCardFlip from 'react-card-flip';
+import { Link } from "react-router-dom";
 
 const { Meta } = CardComponent;
 
@@ -20,7 +21,7 @@ export const Card = ({el}) => {
     cover={<img alt="example" src={el.image} style = {{height:'240px'}} />}
   onClick={onChangeFlipped}
   >
-    <Meta title={el.name}  />
+   <Link to='/details'> <Meta title={el.name}  /></Link>
   </CardComponent>
  
         <CardComponent
@@ -29,7 +30,7 @@ export const Card = ({el}) => {
     cover={<img alt="example" src={el.image} style = {{height:'240px'}} />}
     onClick={onChangeFlipped}
   b >
-    <Meta title={el.name}  />
+    <Link to='/details'><Meta title={el.name}  /></Link>
   </CardComponent>
       </ReactCardFlip>
 
